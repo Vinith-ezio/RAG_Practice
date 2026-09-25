@@ -1,0 +1,334 @@
+[
+    {
+        "chunk_id": 0,
+        "text": "# Industrial Energy Management System (EMS)\n\n## 1. Introduction\n\nAn Industrial Energy Management System (EMS) is a software and hardware platform designed to monitor, analyze, and optimize energy consumption within industrial facilities. Modern EMS platforms collect data from electrical meters, powe"
+    },
+    {
+        "chunk_id": 1,
+        "text": "latforms collect data from electrical meters, power quality analyzers, programmable logic controllers, building management systems, HVAC systems, and industrial equipment.\n\nThe primary objective of an EMS is not simply to display energy consumption. A properly designed system should help organizatio"
+    },
+    {
+        "chunk_id": 2,
+        "text": "A properly designed system should help organizations understand where energy is being consumed, identify abnormal consumption patterns, detect equipment inefficiencies, reduce peak demand, and improve overall energy performance.\n\nIndustrial facilities often contain hundreds or thousands of energy-co"
+    },
+    {
+        "chunk_id": 3,
+        "text": "s often contain hundreds or thousands of energy-consuming assets. These assets may include motors, compressors, pumps, chillers, air-handling units, furnaces, conveyors, production machines, lighting systems, and auxiliary equipment.\n\nBecause energy data is generated continuously, an EMS must be cap"
+    },
+    {
+        "chunk_id": 4,
+        "text": "data is generated continuously, an EMS must be capable of collecting, storing, processing, and analyzing large volumes of time-series data.\n\n---\n\n# 2. Objectives of an Energy Management System\n\nThe major objectives of an Industrial EMS include:\n\n1. Monitoring real-time energy consumption.\n2. Recordi"
+    },
+    {
+        "chunk_id": 5,
+        "text": "onitoring real-time energy consumption.\n2. Recording historical energy data.\n3. Identifying abnormal energy consumption.\n4. Monitoring electrical parameters.\n5. Analyzing power quality.\n6. Reducing peak demand.\n7. Identifying inefficient equipment.\n8. Generating energy performance reports.\n9. Suppor"
+    },
+    {
+        "chunk_id": 6,
+        "text": ". Generating energy performance reports.\n9. Supporting energy audits.\n10. Providing recommendations for energy optimization.\n\nAn EMS can also integrate artificial intelligence and machine learning techniques to identify patterns that may not be visible through conventional rule-based monitoring.\n\nFo"
+    },
+    {
+        "chunk_id": 7,
+        "text": "le through conventional rule-based monitoring.\n\nFor example, a motor may normally consume between 18 kW and 22 kW during a particular production process. If the motor begins consuming 28 kW under the same operating conditions, the EMS can identify this deviation as a potential anomaly.\n\n---\n\n# 3. EM"
+    },
+    {
+        "chunk_id": 8,
+        "text": "is deviation as a potential anomaly.\n\n---\n\n# 3. EMS Architecture\n\nA typical Industrial EMS consists of several layers.\n\n## 3.1 Field Device Layer\n\nThe field device layer contains physical devices responsible for measuring electrical and operational parameters.\n\nCommon devices include:\n\n- Energy mete"
+    },
+    {
+        "chunk_id": 9,
+        "text": "arameters.\n\nCommon devices include:\n\n- Energy meters\n- Power quality meters\n- Current transformers\n- Voltage transformers\n- Temperature sensors\n- Flow meters\n- Pressure sensors\n- Smart submeters\n- PLCs\n- Variable frequency drives\n\nEnergy meters may measure voltage, current, active power, reactive po"
+    },
+    {
+        "chunk_id": 10,
+        "text": "easure voltage, current, active power, reactive power, apparent power, power factor, frequency, and accumulated energy.\n\nThe field devices are generally installed near electrical panels, machines, distribution boards, motor control centers, and production equipment.\n\n---\n\n## 3.2 Communication Layer\n"
+    },
+    {
+        "chunk_id": 11,
+        "text": "ction equipment.\n\n---\n\n## 3.2 Communication Layer\n\nThe communication layer transfers data from field devices to the EMS software.\n\nCommon industrial communication protocols include:\n\n- Modbus RTU\n- Modbus TCP\n- BACnet\n- KNX\n- OPC UA\n- MQTT\n- Ethernet/IP\n\nModbus RTU is commonly used over RS-485 netwo"
+    },
+    {
+        "chunk_id": 12,
+        "text": "/IP\n\nModbus RTU is commonly used over RS-485 networks. Modbus TCP uses Ethernet networks and is frequently used when meters or controllers provide Ethernet connectivity.\n\nMQTT is particularly useful for IoT-based systems because it follows a lightweight publish-subscribe communication model.\n\n---\n\n#"
+    },
+    {
+        "chunk_id": 13,
+        "text": "ght publish-subscribe communication model.\n\n---\n\n## 3.3 Data Acquisition Layer\n\nThe data acquisition layer is responsible for collecting measurements from multiple devices.\n\nA data acquisition service typically performs the following operations:\n\n1. Establish communication with the device.\n2. Read t"
+    },
+    {
+        "chunk_id": 14,
+        "text": "Establish communication with the device.\n2. Read the required registers or parameters.\n3. Convert raw values into engineering units.\n4. Validate the received data.\n5. Add timestamps.\n6. Store the processed values.\n7. Forward data to analytics services.\n\nFor example, a Modbus energy meter may return "
+    },
+    {
+        "chunk_id": 15,
+        "text": "s.\n\nFor example, a Modbus energy meter may return a raw register value of 2356. Depending on the meter configuration, the actual value may represent 235.6 volts after applying a scaling factor of 0.1.\n\nIncorrect scaling can result in misleading dashboards and incorrect energy calculations.\n\n---\n\n# 4"
+    },
+    {
+        "chunk_id": 16,
+        "text": "oards and incorrect energy calculations.\n\n---\n\n# 4. Electrical Parameters\n\nAn EMS should monitor important electrical parameters to understand the behavior of an electrical system.\n\n## 4.1 Voltage\n\nVoltage represents the electrical potential difference between two points.\n\nIn a three-phase industria"
+    },
+    {
+        "chunk_id": 17,
+        "text": "ce between two points.\n\nIn a three-phase industrial system, the EMS may monitor:\n\n- Phase-to-neutral voltage\n- Phase-to-phase voltage\n- Average voltage\n- Voltage imbalance\n\nVoltage abnormalities may indicate electrical faults, supply problems, or equipment-related issues.\n\n---\n\n## 4.2 Current\n\nCurre"
+    },
+    {
+        "chunk_id": 18,
+        "text": "ipment-related issues.\n\n---\n\n## 4.2 Current\n\nCurrent represents the flow of electrical charge through a conductor.\n\nIndustrial EMS platforms commonly measure current for each phase.\n\nHigh current may indicate:\n\n- Motor overload\n- Equipment malfunction\n- Excessive production load\n- Phase imbalance\n- "
+    },
+    {
+        "chunk_id": 19,
+        "text": "n\n- Excessive production load\n- Phase imbalance\n- Short-duration starting conditions\n\nCurrent data should generally be analyzed together with voltage, power, and operating conditions rather than independently.\n\n---\n\n## 4.3 Active Power\n\nActive power represents the useful electrical power consumed by"
+    },
+    {
+        "chunk_id": 20,
+        "text": "represents the useful electrical power consumed by equipment.\n\nThe standard unit is kilowatt (kW).\n\nFor a three-phase system, active power can be approximated using:\n\nP = √3 × V × I × PF\n\nwhere:\n\nP = active power\n\nV = line voltage\n\nI = line current\n\nPF = power factor\n\nThis relationship is useful whe"
+    },
+    {
+        "chunk_id": 21,
+        "text": "PF = power factor\n\nThis relationship is useful when estimating power consumption from measured electrical parameters.\n\n---\n\n## 4.4 Reactive Power\n\nReactive power represents power associated with energy storage and release in inductive and capacitive electrical components.\n\nThe standard unit is kilov"
+    },
+    {
+        "chunk_id": 22,
+        "text": "electrical components.\n\nThe standard unit is kilovolt-ampere reactive (kVAR).\n\nLarge industrial motors and transformers can contribute significant reactive power consumption.\n\n---\n\n## 4.5 Apparent Power\n\nApparent power is the combination of active and reactive power.\n\nIt is measured in kilovolt-ampe"
+    },
+    {
+        "chunk_id": 23,
+        "text": "d reactive power.\n\nIt is measured in kilovolt-amperes (kVA).\n\nThe relationship between active power, reactive power, and apparent power can be represented as:\n\nS² = P² + Q²\n\nwhere:\n\nS = apparent power\n\nP = active power\n\nQ = reactive power\n\n---\n\n## 4.6 Power Factor\n\nPower factor indicates how effecti"
+    },
+    {
+        "chunk_id": 24,
+        "text": "6 Power Factor\n\nPower factor indicates how effectively electrical power is being converted into useful work.\n\nPower factor can be represented as:\n\nPF = P / S\n\nA lower power factor generally means that a larger apparent power is required to deliver the same amount of active power.\n\nIndustrial facilit"
+    },
+    {
+        "chunk_id": 25,
+        "text": "e same amount of active power.\n\nIndustrial facilities may use capacitor banks or automatic power factor correction systems to improve power factor.\n\n---\n\n# 5. Energy Consumption Monitoring\n\nEnergy consumption is typically measured in kilowatt-hours (kWh).\n\nUnlike instantaneous power, which represent"
+    },
+    {
+        "chunk_id": 26,
+        "text": "kWh).\n\nUnlike instantaneous power, which represents the current rate of energy consumption, energy represents accumulated consumption over time.\n\nFor example, a machine operating at 10 kW for 5 hours consumes approximately:\n\nEnergy = Power × Time\n\nEnergy = 10 × 5\n\nEnergy = 50 kWh\n\nAn EMS can calcula"
+    },
+    {
+        "chunk_id": 27,
+        "text": "ergy = 10 × 5\n\nEnergy = 50 kWh\n\nAn EMS can calculate daily, weekly, monthly, and yearly energy consumption.\n\nHistorical energy data is useful for identifying seasonal patterns, production-related changes, and abnormal consumption.\n\n---\n\n# 6. Demand Analysis\n\nEnergy consumption and demand are related"
+    },
+    {
+        "chunk_id": 28,
+        "text": "nalysis\n\nEnergy consumption and demand are related but different concepts.\n\nEnergy measures the total amount of electricity consumed over a period, while demand represents the rate of electricity consumption during a particular interval.\n\nFor example, two factories may consume the same amount of ene"
+    },
+    {
+        "chunk_id": 29,
+        "text": ", two factories may consume the same amount of energy during a day but have significantly different peak demand profiles.\n\nDemand analysis helps organizations identify:\n\n- Peak demand periods\n- Demand spikes\n- Production-related peaks\n- Idle-period demand\n- Equipment responsible for peak demand\n\nRed"
+    },
+    {
+        "chunk_id": 30,
+        "text": "emand\n- Equipment responsible for peak demand\n\nReducing unnecessary peak demand can help reduce electricity costs in tariff structures where demand charges are applicable.\n\n---\n\n# 7. Power Quality Monitoring\n\nPower quality describes the characteristics of electrical power supplied to equipment.\n\nImp"
+    },
+    {
+        "chunk_id": 31,
+        "text": "cs of electrical power supplied to equipment.\n\nImportant power quality parameters include:\n\n- Voltage sag\n- Voltage swell\n- Harmonic distortion\n- Frequency variation\n- Voltage imbalance\n- Current imbalance\n- Transients\n- Flicker\n\nPoor power quality can result in equipment malfunction, production int"
+    },
+    {
+        "chunk_id": 32,
+        "text": "an result in equipment malfunction, production interruptions, overheating, reduced equipment lifetime, and unexpected maintenance requirements.\n\n## 7.1 Harmonic Distortion\n\nHarmonics are waveform components whose frequencies are integer multiples of the fundamental frequency.\n\nFor example, in a 50 H"
+    },
+    {
+        "chunk_id": 33,
+        "text": "the fundamental frequency.\n\nFor example, in a 50 Hz electrical system:\n\n- 1st harmonic = 50 Hz\n- 3rd harmonic = 150 Hz\n- 5th harmonic = 250 Hz\n- 7th harmonic = 350 Hz\n\nTotal Harmonic Distortion (THD) is commonly used to quantify harmonic distortion.\n\nHigh harmonic distortion may be associated with n"
+    },
+    {
+        "chunk_id": 34,
+        "text": "\nHigh harmonic distortion may be associated with nonlinear loads such as variable frequency drives, switching power supplies, UPS systems, and electronic converters.\n\n---\n\n# 8. Energy Baseline\n\nAn energy baseline represents the expected or reference level of energy consumption under defined operatin"
+    },
+    {
+        "chunk_id": 35,
+        "text": "level of energy consumption under defined operating conditions.\n\nA baseline can be created using historical consumption data.\n\nFor example, an industrial facility may establish an expected energy consumption model based on:\n\n- Production quantity\n- Operating hours\n- Outside temperature\n- Machine uti"
+    },
+    {
+        "chunk_id": 36,
+        "text": "perating hours\n- Outside temperature\n- Machine utilization\n- Number of production lines\n\nSuppose a facility historically consumes approximately 1,000 kWh when producing 500 units.\n\nThe organization can compare actual consumption against this baseline to determine whether energy performance has impro"
+    },
+    {
+        "chunk_id": 37,
+        "text": " to determine whether energy performance has improved or deteriorated.\n\n---\n\n# 9. Energy Performance Indicators\n\nEnergy Performance Indicators (EnPIs) are metrics used to evaluate energy performance.\n\nExamples include:\n\n- kWh per unit produced\n- kWh per operating hour\n- kWh per square meter\n- kWh pe"
+    },
+    {
+        "chunk_id": 38,
+        "text": "per operating hour\n- kWh per square meter\n- kWh per production batch\n- Energy cost per unit\n- Peak demand per production unit\n\nFor example:\n\nEnergy Intensity = Total Energy Consumption / Production Output\n\nIf a factory consumes 20,000 kWh to produce 10,000 units:\n\nEnergy Intensity = 20,000 / 10,000\n"
+    },
+    {
+        "chunk_id": 39,
+        "text": "10,000 units:\n\nEnergy Intensity = 20,000 / 10,000\n\nEnergy Intensity = 2 kWh/unit\n\nTracking EnPIs over time provides more meaningful information than looking only at total energy consumption.\n\n---\n\n# 10. AI-Based Energy Anomaly Detection\n\nArtificial intelligence can be integrated into an EMS to detec"
+    },
+    {
+        "chunk_id": 40,
+        "text": "ntelligence can be integrated into an EMS to detect unusual energy behavior.\n\nA machine learning model can learn normal operating patterns from historical data.\n\nPotential input features include:\n\n- Voltage\n- Current\n- Active power\n- Reactive power\n- Power factor\n- Production quantity\n- Machine oper"
+    },
+    {
+        "chunk_id": 41,
+        "text": " Power factor\n- Production quantity\n- Machine operating status\n- Temperature\n- Time of day\n- Day of week\n\nThe model can estimate expected energy consumption and compare it with actual consumption.\n\nIf the difference exceeds a predefined threshold, the system can generate an anomaly alert.\n\nFor examp"
+    },
+    {
+        "chunk_id": 42,
+        "text": "e system can generate an anomaly alert.\n\nFor example:\n\nExpected Power = 20 kW\n\nActual Power = 31 kW\n\nDeviation = 11 kW\n\nDeviation Percentage = 55%\n\nDepending on the operating context, this deviation may indicate abnormal equipment behavior.\n\nHowever, an anomaly does not automatically mean that equip"
+    },
+    {
+        "chunk_id": 43,
+        "text": " an anomaly does not automatically mean that equipment is faulty. Production changes, maintenance activities, environmental conditions, or operational changes may also cause deviations.\n\n---\n\n# 11. Rule-Based Energy Alerts\n\nBefore implementing machine learning, an EMS can use rule-based alerts.\n\nExa"
+    },
+    {
+        "chunk_id": 44,
+        "text": "e learning, an EMS can use rule-based alerts.\n\nExample rules include:\n\n### High Power Alert\n\nIf:\n\nPower > 50 kW\n\nthen:\n\nGenerate high-power alert.\n\n### Low Power Factor Alert\n\nIf:\n\nPower Factor < 0.85\n\nthen:\n\nGenerate power-factor warning.\n\n### High Temperature Alert\n\nIf:\n\nTemperature > 80°C\n\nthen:\n"
+    },
+    {
+        "chunk_id": 45,
+        "text": "Temperature Alert\n\nIf:\n\nTemperature > 80°C\n\nthen:\n\nGenerate temperature warning.\n\nRule-based systems are easy to understand and implement but may not adapt well to complex operating conditions.\n\n---\n\n# 12. Machine Learning-Based Detection\n\nMachine learning models can identify patterns that are diffi"
+    },
+    {
+        "chunk_id": 46,
+        "text": "arning models can identify patterns that are difficult to define using fixed rules.\n\nCommon approaches include:\n\n- Linear Regression\n- Random Forest\n- XGBoost\n- Isolation Forest\n- Autoencoders\n- LSTM networks\n- Temporal Convolutional Networks\n- Transformer-based models\n\nSupervised learning requires "
+    },
+    {
+        "chunk_id": 47,
+        "text": "former-based models\n\nSupervised learning requires labeled examples of normal and abnormal conditions.\n\nUnsupervised anomaly detection can be useful when labeled fault data is limited.\n\nIsolation Forest is one example of an unsupervised anomaly detection algorithm.\n\n---\n\n# 13. Time-Series Data\n\nEnerg"
+    },
+    {
+        "chunk_id": 48,
+        "text": "ion algorithm.\n\n---\n\n# 13. Time-Series Data\n\nEnergy data is naturally represented as time-series data.\n\nA typical record may contain:\n\nTimestamp | Meter ID | Voltage | Current | Power | Energy | Power Factor\n\nExample:\n\n2026-09-25 08:00:00 | MTR-001 | 415 V | 42 A | 25.8 kW | 12540 kWh | 0.91\n\n2026-0"
+    },
+    {
+        "chunk_id": 49,
+        "text": " 415 V | 42 A | 25.8 kW | 12540 kWh | 0.91\n\n2026-09-25 08:05:00 | MTR-001 | 414 V | 44 A | 26.7 kW | 12542 kWh | 0.90\n\n2026-09-25 08:10:00 | MTR-001 | 416 V | 51 A | 31.2 kW | 12545 kWh | 0.87\n\nThe timestamp is important because energy behavior must often be analyzed relative to production schedules"
+    },
+    {
+        "chunk_id": 50,
+        "text": "often be analyzed relative to production schedules and operating periods.\n\n---\n\n# 14. Data Storage\n\nEMS platforms may use different storage technologies depending on system requirements.\n\nCommon options include:\n\n- PostgreSQL\n- MySQL\n- SQLite\n- InfluxDB\n- TimescaleDB\n- MongoDB\n\nRelational databases "
+    },
+    {
+        "chunk_id": 51,
+        "text": "xDB\n- TimescaleDB\n- MongoDB\n\nRelational databases are useful when energy data needs to be associated with structured entities such as facilities, buildings, meters, machines, users, and departments.\n\nTime-series databases can be particularly useful for high-frequency sensor measurements.\n\nA typical "
+    },
+    {
+        "chunk_id": 52,
+        "text": "or high-frequency sensor measurements.\n\nA typical database structure may contain:\n\nFacility\n\n→ Building\n\n→ Electrical Panel\n\n→ Meter\n\n→ Measurement\n\nThis hierarchical structure allows energy consumption to be analyzed at multiple levels.\n\n---\n\n# 15. EMS Dashboard\n\nAn EMS dashboard should convert raw"
+    },
+    {
+        "chunk_id": 53,
+        "text": "EMS Dashboard\n\nAn EMS dashboard should convert raw measurements into meaningful information.\n\nA typical dashboard may contain:\n\n## Energy Overview\n\n- Today's consumption\n- Monthly consumption\n- Energy cost\n- Current demand\n- Peak demand\n- Energy intensity\n\n## Electrical Parameters\n\n- Voltage\n- Curre"
+    },
+    {
+        "chunk_id": 54,
+        "text": "nsity\n\n## Electrical Parameters\n\n- Voltage\n- Current\n- Active power\n- Reactive power\n- Apparent power\n- Power factor\n- Frequency\n\n## Power Quality\n\n- THD\n- Voltage imbalance\n- Current imbalance\n- Voltage events\n- Frequency variation\n\n## Demand Analysis\n\n- Current demand\n- Maximum demand\n- Demand tre"
+    },
+    {
+        "chunk_id": 55,
+        "text": "is\n\n- Current demand\n- Maximum demand\n- Demand trend\n- Peak demand period\n- Demand comparison\n\n## AI Analytics\n\n- Detected anomalies\n- Energy forecast\n- Equipment efficiency\n- Predicted consumption\n- Recommended actions\n\n---\n\n# 16. Energy Forecasting\n\nEnergy forecasting attempts to predict future en"
+    },
+    {
+        "chunk_id": 56,
+        "text": "\n\nEnergy forecasting attempts to predict future energy consumption.\n\nA forecasting model may use historical energy consumption along with contextual variables.\n\nPossible input variables include:\n\n- Historical energy\n- Production schedule\n- Weather\n- Temperature\n- Day of week\n- Time of day\n- Machine "
+    },
+    {
+        "chunk_id": 57,
+        "text": "Temperature\n- Day of week\n- Time of day\n- Machine operating state\n\nForecasting can help organizations plan energy usage and identify expected peak periods.\n\nFor example, if the model predicts unusually high consumption between 14:00 and 16:00, operators may investigate the production schedule or shi"
+    },
+    {
+        "chunk_id": 58,
+        "text": "ors may investigate the production schedule or shift flexible loads to another period.\n\n---\n\n# 17. Energy Optimization\n\nEnergy optimization focuses on reducing unnecessary consumption while maintaining required production performance.\n\nPossible optimization strategies include:\n\n- Scheduling high-ene"
+    },
+    {
+        "chunk_id": 59,
+        "text": "ization strategies include:\n\n- Scheduling high-energy equipment\n- Improving motor efficiency\n- Optimizing HVAC operation\n- Reducing idle equipment\n- Improving power factor\n- Managing peak demand\n- Detecting compressed-air leakage\n- Optimizing pump operation\n- Using variable frequency drives\n- Improv"
+    },
+    {
+        "chunk_id": 60,
+        "text": "eration\n- Using variable frequency drives\n- Improving lighting control\n\nOptimization should consider operational constraints.\n\nReducing energy consumption should not negatively affect production quality, safety, equipment reliability, or required operating conditions.\n\n---\n\n# 18. Industrial IoT Inte"
+    },
+    {
+        "chunk_id": 61,
+        "text": "rating conditions.\n\n---\n\n# 18. Industrial IoT Integration\n\nIndustrial IoT allows physical equipment to communicate with software platforms.\n\nA typical architecture may look like:\n\nSensors\n\n↓\n\nPLC / Meter\n\n↓\n\nIndustrial Gateway\n\n↓\n\nMQTT / OPC UA / Modbus\n\n↓\n\nEdge Computer\n\n↓\n\nCloud or Local Server\n\n↓"
+    },
+    {
+        "chunk_id": 62,
+        "text": "bus\n\n↓\n\nEdge Computer\n\n↓\n\nCloud or Local Server\n\n↓\n\nEMS Platform\n\n↓\n\nAnalytics / AI\n\n↓\n\nDashboard\n\nEdge computing can reduce latency and allow certain analytics functions to operate locally without continuously sending raw data to the cloud.\n\n---\n\n# 19. Edge Computing\n\nEdge computing processes data "
+    },
+    {
+        "chunk_id": 63,
+        "text": "19. Edge Computing\n\nEdge computing processes data close to where it is generated.\n\nIn an EMS, an edge device may perform:\n\n- Data collection\n- Protocol conversion\n- Data filtering\n- Local storage\n- Anomaly detection\n- Device health monitoring\n- Alert generation\n\nFor example, an industrial gateway ma"
+    },
+    {
+        "chunk_id": 64,
+        "text": " generation\n\nFor example, an industrial gateway may collect data from Modbus meters and publish normalized measurements to an MQTT broker.\n\nIf internet connectivity is temporarily unavailable, the edge device can buffer data locally and synchronize it after connectivity is restored.\n\n---\n\n# 20. Data"
+    },
+    {
+        "chunk_id": 65,
+        "text": "t after connectivity is restored.\n\n---\n\n# 20. Data Quality\n\nData quality is critical for energy analytics.\n\nCommon data-quality problems include:\n\n- Missing values\n- Duplicate records\n- Incorrect timestamps\n- Communication failures\n- Sensor drift\n- Incorrect scaling\n- Negative values\n- Outliers\n- Un"
+    },
+    {
+        "chunk_id": 66,
+        "text": "ncorrect scaling\n- Negative values\n- Outliers\n- Unit mismatches\n\nBefore training a machine learning model, data should be validated and cleaned.\n\nFor example, if a meter normally reports 400–450 V but suddenly reports 4,500 V, the value should be investigated rather than blindly included in model tr"
+    },
+    {
+        "chunk_id": 67,
+        "text": "estigated rather than blindly included in model training.\n\n---\n\n# 21. RAG Integration with EMS\n\nRetrieval-Augmented Generation (RAG) can be integrated with an EMS to create a natural-language energy assistant.\n\nThe assistant can retrieve information from:\n\n- Energy audit reports\n- Equipment manuals\n"
+    },
+    {
+        "chunk_id": 68,
+        "text": "from:\n\n- Energy audit reports\n- Equipment manuals\n- Electrical drawings\n- Maintenance documents\n- Energy policies\n- SOP documents\n- Historical reports\n- ISO 50001 documentation\n- Equipment specifications\n\nA user could ask:\n\n\"Why did the energy consumption increase yesterday?\"\n\nThe RAG system can ret"
+    },
+    {
+        "chunk_id": 69,
+        "text": "ption increase yesterday?\"\n\nThe RAG system can retrieve relevant reports and operational documentation before generating an answer.\n\nAnother example:\n\n\"What is the recommended operating range for this equipment?\"\n\nThe system can retrieve the equipment manual and provide an answer based on the retrie"
+    },
+    {
+        "chunk_id": 70,
+        "text": "t manual and provide an answer based on the retrieved content.\n\n---\n\n# 22. RAG Pipeline\n\nA basic RAG pipeline consists of:\n\n1. Document ingestion\n2. Document parsing\n3. Text cleaning\n4. Chunking\n5. Embedding generation\n6. Vector database storage\n7. User query\n8. Query embedding\n9. Similarity search\n"
+    },
+    {
+        "chunk_id": 71,
+        "text": "ser query\n8. Query embedding\n9. Similarity search\n10. Context retrieval\n11. Prompt construction\n12. LLM generation\n\nChunking is one of the most important stages because the quality of retrieval depends heavily on how documents are divided.\n\nIf chunks are too large, retrieval may return unnecessary i"
+    },
+    {
+        "chunk_id": 72,
+        "text": " are too large, retrieval may return unnecessary information.\n\nIf chunks are too small, important context may be separated across multiple chunks.\n\n---\n\n# 23. Chunking Strategies\n\nSeveral chunking strategies can be used in a RAG system.\n\n## 23.1 Fixed-Size Chunking\n\nThe document is divided into chun"
+    },
+    {
+        "chunk_id": 73,
+        "text": "d-Size Chunking\n\nThe document is divided into chunks based on a fixed number of characters or tokens.\n\nExample:\n\nChunk size = 500 tokens\n\nOverlap = 50 tokens\n\nAdvantages:\n\n- Simple\n- Fast\n- Easy to implement\n\nDisadvantages:\n\n- May split sentences\n- May separate related concepts\n- Does not understand"
+    },
+    {
+        "chunk_id": 74,
+        "text": "ay separate related concepts\n- Does not understand document structure\n\n---\n\n## 23.2 Recursive Chunking\n\nRecursive chunking attempts to divide text using hierarchical separators.\n\nA typical hierarchy may be:\n\n1. Paragraph\n2. Sentence\n3. Word\n4. Character\n\nThe system attempts to preserve meaningful te"
+    },
+    {
+        "chunk_id": 75,
+        "text": "ter\n\nThe system attempts to preserve meaningful text boundaries while maintaining the desired chunk size.\n\nThis approach is commonly useful for general-purpose RAG systems.\n\n---\n\n## 23.3 Semantic Chunking\n\nSemantic chunking groups text based on meaning rather than only character or token count.\n\nFor"
+    },
+    {
+        "chunk_id": 76,
+        "text": "ng rather than only character or token count.\n\nFor example, paragraphs discussing power factor may be grouped together because they represent a single semantic concept.\n\nSemantic chunking can improve retrieval quality but usually requires additional computation.\n\n---\n\n## 23.4 Document-Structure Chun"
+    },
+    {
+        "chunk_id": 77,
+        "text": "computation.\n\n---\n\n## 23.4 Document-Structure Chunking\n\nDocument-structure chunking uses headings, sections, tables, lists, and other document elements.\n\nFor this document, examples include:\n\n- \"Electrical Parameters\"\n- \"Power Quality Monitoring\"\n- \"Energy Baseline\"\n- \"AI-Based Energy Anomaly Detect"
+    },
+    {
+        "chunk_id": 78,
+        "text": "Energy Baseline\"\n- \"AI-Based Energy Anomaly Detection\"\n\nEach section can become a meaningful retrieval unit.\n\n---\n\n# 24. Chunk Overlap\n\nChunk overlap means repeating a portion of one chunk in the next chunk.\n\nExample:\n\nChunk 1:\n\n\"Energy consumption is measured in kilowatt-hours. Historical energy da"
+    },
+    {
+        "chunk_id": 79,
+        "text": "s measured in kilowatt-hours. Historical energy data is useful for identifying...\"\n\nChunk 2:\n\n\"Historical energy data is useful for identifying seasonal patterns, production-related changes, and abnormal consumption.\"\n\nThe repeated section provides continuity between chunks.\n\nOverlap can help when a"
+    },
+    {
+        "chunk_id": 80,
+        "text": "ontinuity between chunks.\n\nOverlap can help when an important concept occurs near a chunk boundary.\n\nHowever, excessive overlap increases storage requirements and may introduce redundant retrieval results.\n\n---\n\n# 25. Chunk Metadata\n\nEach chunk should ideally contain metadata.\n\nExample:\n\n```json\n{\n "
+    },
+    {
+        "chunk_id": 81,
+        "text": "d ideally contain metadata.\n\nExample:\n\n```json\n{\n  \"chunk_id\": \"ems_0042\",\n  \"document\": \"industrial_energy_management.md\",\n  \"section\": \"Electrical Parameters\",\n  \"subsection\": \"Active Power\",\n  \"source_type\": \"technical_document\",\n  \"page\": null,\n  \"created_at\": \"2026-09-25\"\n}"
+    },
+    {
+        "chunk_id": 82,
+        "text": " \"created_at\": \"2026-09-25\"\n}"
+    }
+]
